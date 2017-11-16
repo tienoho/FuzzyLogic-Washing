@@ -16,6 +16,7 @@ namespace FuzzyLogic_WashingMachine
         KindOfDirt kindOfDir;
         Washing washing;
         float s, m, l;
+        float y, x1, x2;
         public WashingMachine()
         {
             InitializeComponent();
@@ -169,6 +170,11 @@ namespace FuzzyLogic_WashingMachine
             pen.Brush = Brushes.PowderBlue;
             if (washing._VeryShort != 0.0f)
             {
+                //y = 150 - washing._VeryShort * 150;
+                //x1 = 0;
+                //x2 = (3 - washing._VeryShort) * 10;
+                //WashingDraw(g, pen, washing._VeryShort);
+
                 float y = 150 - washing._VeryShort * 150;
                 float x1 = 0;
                 float x2 = (3 - washing._VeryShort) * 10;
@@ -188,6 +194,11 @@ namespace FuzzyLogic_WashingMachine
             }
             if (washing._Short != 0.0f)
             {
+                //y = 150 - washing._Short * 150;
+                //x1 = (4 * washing._Short + (int)WashingTime.VeryShort) * 2.5f;
+                //x2 = ((int)WashingTime.Medium - (int)WashingTime.VeryShort * washing._Short) * 2.5f;
+                //WashingDraw(g, pen, washing._Short);
+
                 float y = 150 - washing._Short * 150;
                 float x1 = (4 * washing._Short + 8) * 2.5f;
                 float x2 = (20 - 8 * washing._Short) * 2.5f;
@@ -206,6 +217,11 @@ namespace FuzzyLogic_WashingMachine
             }
             if (washing._Medium != 0.0f)
             {
+                //y = 150 - washing._Medium * 150;
+                //x1 = ((int)WashingTime.VeryShort * washing._Medium + (int)WashingTime.Short) * 2.5f;
+                //x2 = ((int)WashingTime.Long - (int)WashingTime.Medium * washing._Medium) * 2.5f;
+                //WashingDraw(g, pen, washing._Medium);
+
                 float y = 150 - washing._Medium * 150;
                 float x1 = (8 * washing._Medium + 12) * 2.5f;
                 float x2 = (40 - 20 * washing._Medium) * 2.5f;
@@ -224,6 +240,11 @@ namespace FuzzyLogic_WashingMachine
             }
             if (washing._Long != 0.0f)
             {
+                //y = 150 - washing._Long * 150;
+                //x1 = ((int)WashingTime.Medium * washing._Long + (int)WashingTime.Medium) * 2.5f;
+                //x2 = ((int)WashingTime.VeryLong - (int)WashingTime.Medium * washing._Long) * 2.5f;
+                //WashingDraw(g, pen, washing._Long);
+
                 float y = 150 - washing._Long * 150;
                 float x1 = (20 * washing._Long + 20) * 2.5f;
                 float x2 = (60 - 20 * washing._Long) * 2.5f;
@@ -242,6 +263,11 @@ namespace FuzzyLogic_WashingMachine
             }
             if (washing._VeryLong != 0.0f)
             {
+                //y = 150 - washing._VeryLong * 150;
+                //x1 = ((int)WashingTime.Medium * washing._VeryLong + (int)WashingTime.VeryLong) * 2.5f;
+                //x2 = 150;
+                //WashingDraw(g, pen, washing._VeryLong);
+
                 float y = 150 - washing._VeryLong * 150;
                 float x1 = (20 * washing._VeryLong + 40) * 2.5f;
                 float x2 = 150;
@@ -259,6 +285,24 @@ namespace FuzzyLogic_WashingMachine
                     g.DrawLine(pen, x1, y, x2, y);
             }
             g.Dispose();
+        }
+        private void WashingDraw(Graphics g, Pen pen, float type)
+        {
+            //float y = 150 - type * 150;
+            //float x1 = (20 * type + 20) * 2.5f;
+            //float x2 = (60 - 20 * type) * 2.5f;
+            if (checkBox_Fill.Checked == true)
+            {
+                PointF[] p = {
+                            new PointF(x1,y),
+                            new PointF(x2,y),
+                            new PointF(150,150),
+                            new PointF(50,150)
+                                };
+                g.FillPolygon(Brushes.White, p);
+            }
+            else
+                g.DrawLine(pen, x1, y, x2, y);
         }
     }
 }
