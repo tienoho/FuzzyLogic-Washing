@@ -69,7 +69,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(189, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(97, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -100,7 +100,7 @@
             this.tabControl2.Location = new System.Drawing.Point(9, 36);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(766, 356);
+            this.tabControl2.Size = new System.Drawing.Size(652, 356);
             this.tabControl2.TabIndex = 9;
             // 
             // tabPage2
@@ -113,7 +113,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(758, 330);
+            this.tabPage2.Size = new System.Drawing.Size(644, 330);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Control";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             this.trackBar_loaichatban.Location = new System.Drawing.Point(8, 282);
             this.trackBar_loaichatban.Maximum = 100;
             this.trackBar_loaichatban.Name = "trackBar_loaichatban";
-            this.trackBar_loaichatban.Size = new System.Drawing.Size(744, 45);
+            this.trackBar_loaichatban.Size = new System.Drawing.Size(607, 45);
             this.trackBar_loaichatban.TabIndex = 4;
             this.trackBar_loaichatban.Scroll += new System.EventHandler(this.trackBar_loaichatban_Scroll);
             // 
@@ -139,21 +139,18 @@
             this.trackBar_doban.Location = new System.Drawing.Point(8, 231);
             this.trackBar_doban.Maximum = 100;
             this.trackBar_doban.Name = "trackBar_doban";
-            this.trackBar_doban.Size = new System.Drawing.Size(744, 45);
+            this.trackBar_doban.Size = new System.Drawing.Size(607, 45);
             this.trackBar_doban.TabIndex = 3;
             this.trackBar_doban.Scroll += new System.EventHandler(this.trackBar_doban_Scroll);
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.checkBox_Fill);
             this.groupBox3.Controls.Add(this.label_washingtime);
             this.groupBox3.Controls.Add(this.pictureBox3);
             this.groupBox3.Location = new System.Drawing.Point(385, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(367, 217);
+            this.groupBox3.Size = new System.Drawing.Size(230, 217);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Wash Time";
@@ -161,7 +158,7 @@
             // checkBox_Fill
             // 
             this.checkBox_Fill.AutoSize = true;
-            this.checkBox_Fill.Location = new System.Drawing.Point(310, 188);
+            this.checkBox_Fill.Location = new System.Drawing.Point(120, 191);
             this.checkBox_Fill.Name = "checkBox_Fill";
             this.checkBox_Fill.Size = new System.Drawing.Size(38, 17);
             this.checkBox_Fill.TabIndex = 6;
@@ -184,20 +181,17 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Location = new System.Drawing.Point(14, 21);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(347, 156);
+            this.pictureBox3.Size = new System.Drawing.Size(206, 156);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label_loaichatban);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(198, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(181, 217);
+            this.groupBox2.Size = new System.Drawing.Size(175, 217);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Type of Dirt";
@@ -223,14 +217,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label_doban);
             this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 217);
+            this.groupBox1.Size = new System.Drawing.Size(179, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dirtness of clothes";
@@ -259,7 +250,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(581, 330);
+            this.tabPage3.Size = new System.Drawing.Size(758, 330);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "3D";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -268,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 421);
+            this.ClientSize = new System.Drawing.Size(669, 421);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "WashingMachine";

@@ -62,12 +62,7 @@ namespace FuzzyLogic_WashingMachine
         {
             UpdateChart();
         }
-        private void DrawLineCloudiness(Pen pen, Graphics g, int x, float cloudiness)
-        {
-            int y = (int)(150 - cloudiness * 150);
-            g.DrawLine(pen, new Point(x, 150), new Point(x, y));
-            g.DrawLine(pen, new Point(x, y), new Point(0, y));
-        }
+        
         private void DrawChartCloudiness(Graphics graphics, Cloudiness cloudiness)
         {
             Pen pen = new Pen(Brushes.Green);
@@ -89,7 +84,12 @@ namespace FuzzyLogic_WashingMachine
         {
             this.Invalidate();
         }
-
+        private void DrawLineCloudiness(Pen pen, Graphics g, int x, float cloudiness)
+        {
+            int y = (int)(150 - cloudiness * 150);
+            g.DrawLine(pen, new Point(x, 150), new Point(x, y));
+            g.DrawLine(pen, new Point(x, y), new Point(0, y));
+        }
         private void DrawChart(Graphics graphics, Pen pen, PictureBox pictureBox)
         {
             Bitmap img = new Bitmap(pictureBox.Width, pictureBox.Height, graphics);

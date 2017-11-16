@@ -61,9 +61,9 @@ namespace FuzzyLogic_WashingMachine
 
         private void isBuildChart(int i, float a, float b, WashingTime x, WashingTime y)
         {
-            float xy = (float)(x - y);
-            y1 = Math.Min(a, ((int)x - i) / xy);
-            y2 = Math.Min(b, (i - (int)y) / xy);
+            float xy = (x - y);
+            y1 = Math.Min(a, ((float)x - i) / xy);
+            y2 = Math.Min(b, (i - (float)y) / xy);
             washing_Y[i] = Math.Max(y1, y2);
         }
         private void BuildChart()
