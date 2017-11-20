@@ -29,7 +29,7 @@ namespace FuzzyLogic_WashingMachine
             {
                 small = 0;
                 medium = 2 - value / 50.0f;
-                large = value / 50.0f;
+                large = value / 50.0f - 1;
             }
         }
     }

@@ -25,11 +25,11 @@ namespace FuzzyLogic_WashingMachine
                 Medium = value / 50.0f;
                 Greasy = 0;
             }
-            else
+            else if (value <= 100)
             {
                 notGreasy = 0;
                 Medium = 2 - value / 50.0f;
-                Greasy = value / 50.0f;
+                Greasy = value / 50.0f-1;
             }
         }
     }
