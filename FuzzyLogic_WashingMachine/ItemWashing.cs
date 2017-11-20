@@ -16,9 +16,6 @@ namespace FuzzyLogic_WashingMachine
         public const int endRight = 150;
         public Graphics graphics { get; set; }
         public Pen pen { get; set; }
-        public PictureBox pictureBox1 { get; set; }
-        public PictureBox pictureBox2 { get; set; }
-        public PictureBox pictureBox3 { get; set; }
         public int trackBar_doban { get; set; }
         public int trackBar_loaiban { get; set; }
         //s
