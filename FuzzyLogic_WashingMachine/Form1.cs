@@ -16,6 +16,7 @@ namespace FuzzyLogic_WashingMachine
         Cloudiness cloudiness;
         KindOfDirt kindOfDir;
         Washing washing;
+        Weight weightClothes;
         public WashingMachine()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace FuzzyLogic_WashingMachine
         private void WashingMachine_Load(object sender, EventArgs e)
         {
             UpdateChart();
+            UpdateWeight();
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -34,6 +36,8 @@ namespace FuzzyLogic_WashingMachine
         {
 
         }
+        
+
         private void UpdateChart()
         {
             label_doban.Text = "Độ bẩn : " + trackBar_doban.Value.ToString();
@@ -41,15 +45,18 @@ namespace FuzzyLogic_WashingMachine
             cloudiness = new Cloudiness(trackBar_doban.Value);
             kindOfDir = new KindOfDirt(trackBar_loaichatban.Value);
             washing = new Washing();
+            label_washingtime.Text = "Thời gian giặt : " + washing.ComputeTime(cloudiness, kindOfDir).ToString();
             isGiatNgam();
             this.Invalidate();
         }
 
         private void WashingMachine_Paint(object sender, PaintEventArgs e)
-        {            
+        {
             DrawChartCloudiness(e.Graphics, cloudiness);
             DrawChartKindOfDirt(e.Graphics, kindOfDir);
             DrawChart3(e.Graphics);
+            DrawChartWeight(e.Graphics, weightClothes);
+
         }
 
         private void trackBar_doban_Scroll(object sender, EventArgs e)
@@ -69,12 +76,12 @@ namespace FuzzyLogic_WashingMachine
             item.numberMedium = cloudiness.medium;
             item.numberLarger = cloudiness.large;
             item.trackBar_doban = trackBar_doban.Value;
-            new WashingInput(item,graphics, item.pen, pictureBox1, trackBar_doban.Value);
+            new WashingInput(item, graphics, item.pen, pictureBox1, trackBar_doban.Value);
         }
         private void DrawChartKindOfDirt(Graphics graphics, KindOfDirt kindOfDir)
         {
             item.pen = new Pen(Brushes.Green);
-            item.numberSmall =  kindOfDir.notGreasy;
+            item.numberSmall = kindOfDir.notGreasy;
             item.numberMedium = kindOfDir.Medium;
             item.numberLarger = kindOfDir.Greasy;
             item.trackBar_doban = trackBar_doban.Value;
@@ -98,22 +105,55 @@ namespace FuzzyLogic_WashingMachine
                 g.DrawLine(pen, new Point(0, ipoint), new Point(img.Width, ipoint));
             }
             //vẽ hình kết quả
-            new WashingOutput(g,pen,img,pictureBox3, washing, checkBox_Fill);            
-        }
-        private void cb_giatNgam_CheckedChanged(object sender, EventArgs e)
-        {
-            isGiatNgam();
+            new WashingOutput(g, pen, img, pictureBox3, washing, checkBox_Fill);
         }
         private void isGiatNgam()
         {
             if (cb_giatNgam.Checked == true)
             {
-                label_washingtime.Text = "Thời gian giặt : " + (washing.ComputeTime(cloudiness, kindOfDir) + 60).ToString();
+                lb_sumTime.Text = (washing.ComputeTime(cloudiness, kindOfDir) + 60).ToString();
             }
             else
             {
-                label_washingtime.Text = "Thời gian giặt : " + washing.ComputeTime(cloudiness, kindOfDir).ToString();
+                lb_sumTime.Text = washing.ComputeTime(cloudiness, kindOfDir).ToString();
             }
+        }
+
+        private void cb_giatNgam_CheckedChanged_1(object sender, EventArgs e)
+        {
+            isGiatNgam();
+        }
+        //Cân nặng
+        private void UpdateWeight()
+        {
+            //trọng lượng tối đa là 10kg
+            label_trongluong.Text = "Trọng lượng : " + ((float)trackBar_kg.Value/10).ToString()+" kg";
+            weightClothes = new Weight(trackBar_kg.Value);
+            //washing = new Washing();
+            label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4 ).ToString()+" lít";
+
+            this.Invalidate();
+        }
+
+        private void trackBar_kg_Scroll(object sender, EventArgs e)
+        {
+            UpdateWeight();
+        }
+        private void DrawChartWeight(Graphics graphics, Weight weightClothes)
+        {
+            item.pen = new Pen(Brushes.Green);
+            item.numberSmall = weightClothes.small;
+            item.numberMedium = weightClothes.medium;
+            item.numberLarger = weightClothes.large;
+            item.trackBar_doban = trackBar_kg.Value;
+            new WashingInput(item, graphics, item.pen, pB_kgQuanAo, trackBar_kg.Value);
+            item.pen = new Pen(Brushes.Green);
+            new WashingInput(item, graphics, item.pen, pB_Water, trackBar_kg.Value);
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="Washing.cs" />
     <Compile Include="WashingOutput.cs" />
     <Compile Include="WashingInput.cs" />
+    <Compile Include="Weight.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
