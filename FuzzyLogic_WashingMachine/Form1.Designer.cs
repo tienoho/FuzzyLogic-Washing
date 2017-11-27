@@ -260,7 +260,6 @@
             this.cb_giatNgam.TabIndex = 7;
             this.cb_giatNgam.Text = "Giặt ngâm";
             this.cb_giatNgam.UseVisualStyleBackColor = true;
-            this.cb_giatNgam.CheckedChanged += new System.EventHandler(this.cb_giatNgam_CheckedChanged);
             // 
             // WashingMachine
             // 

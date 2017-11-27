@@ -98,7 +98,7 @@ namespace FuzzyLogic_WashingMachine
                 g.DrawLine(pen, new Point(0, ipoint), new Point(img.Width, ipoint));
             }
             //vẽ hình kết quả
-            new WashingOutput(g,pen,img,pictureBox3, washing,cb_giatNgam);            
+            new WashingOutput(g,pen,img,pictureBox3, washing, checkBox_Fill);            
         }
         private void cb_giatNgam_CheckedChanged(object sender, EventArgs e)
         {
