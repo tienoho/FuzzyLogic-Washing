@@ -41,7 +41,7 @@ namespace FuzzyLogic_WashingMachine
             cloudiness = new Cloudiness(trackBar_doban.Value);
             kindOfDir = new KindOfDirt(trackBar_loaichatban.Value);
             washing = new Washing();
-            label_washingtime.Text = "Thời gian giặt : " + washing.ComputeTime(cloudiness, kindOfDir).ToString();
+            isGiatNgam();
             this.Invalidate();
         }
 
@@ -93,11 +93,27 @@ namespace FuzzyLogic_WashingMachine
             //gạch dọc
             for (int i = 0; i <= 20; i++)
             {
-                g.DrawLine(pen, new Point(i * 25, 0), new Point(i * 25, img.Height));
-                g.DrawLine(pen, new Point(0, i * 25), new Point(img.Width, i * 25));
+                int ipoint = i * 25;
+                g.DrawLine(pen, new Point(ipoint, 0), new Point(ipoint, img.Height));
+                g.DrawLine(pen, new Point(0, ipoint), new Point(img.Width, ipoint));
             }
             //vẽ hình kết quả
-            new WashingOutput(g,pen,img,pictureBox3, washing,checkBox_Fill);            
+            new WashingOutput(g,pen,img,pictureBox3, washing,cb_giatNgam);            
+        }
+        private void cb_giatNgam_CheckedChanged(object sender, EventArgs e)
+        {
+            isGiatNgam();
+        }
+        private void isGiatNgam()
+        {
+            if (cb_giatNgam.Checked == true)
+            {
+                label_washingtime.Text = "Thời gian giặt : " + (washing.ComputeTime(cloudiness, kindOfDir) + 60).ToString();
+            }
+            else
+            {
+                label_washingtime.Text = "Thời gian giặt : " + washing.ComputeTime(cloudiness, kindOfDir).ToString();
+            }
         }
     }
 }

@@ -47,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_doban = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cb_giatNgam = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -100,11 +101,12 @@
             this.tabControl2.Location = new System.Drawing.Point(9, 36);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(652, 356);
+            this.tabControl2.Size = new System.Drawing.Size(652, 401);
             this.tabControl2.TabIndex = 9;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cb_giatNgam);
             this.tabPage2.Controls.Add(this.trackBar_loaichatban);
             this.tabPage2.Controls.Add(this.trackBar_doban);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -113,7 +115,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(644, 330);
+            this.tabPage2.Size = new System.Drawing.Size(644, 375);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Control";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -121,10 +123,7 @@
             // trackBar_loaichatban
             // 
             this.trackBar_loaichatban.AllowDrop = true;
-            this.trackBar_loaichatban.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBar_loaichatban.Location = new System.Drawing.Point(8, 282);
+            this.trackBar_loaichatban.Location = new System.Drawing.Point(3, 319);
             this.trackBar_loaichatban.Maximum = 100;
             this.trackBar_loaichatban.Name = "trackBar_loaichatban";
             this.trackBar_loaichatban.Size = new System.Drawing.Size(607, 45);
@@ -133,10 +132,7 @@
             // 
             // trackBar_doban
             // 
-            this.trackBar_doban.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBar_doban.Location = new System.Drawing.Point(8, 231);
+            this.trackBar_doban.Location = new System.Drawing.Point(3, 268);
             this.trackBar_doban.Maximum = 100;
             this.trackBar_doban.Name = "trackBar_doban";
             this.trackBar_doban.Size = new System.Drawing.Size(607, 45);
@@ -158,7 +154,7 @@
             // checkBox_Fill
             // 
             this.checkBox_Fill.AutoSize = true;
-            this.checkBox_Fill.Location = new System.Drawing.Point(120, 191);
+            this.checkBox_Fill.Location = new System.Drawing.Point(169, 191);
             this.checkBox_Fill.Name = "checkBox_Fill";
             this.checkBox_Fill.Size = new System.Drawing.Size(38, 17);
             this.checkBox_Fill.TabIndex = 6;
@@ -250,16 +246,27 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(758, 330);
+            this.tabPage3.Size = new System.Drawing.Size(644, 330);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "3D";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // cb_giatNgam
+            // 
+            this.cb_giatNgam.AutoSize = true;
+            this.cb_giatNgam.Location = new System.Drawing.Point(8, 245);
+            this.cb_giatNgam.Name = "cb_giatNgam";
+            this.cb_giatNgam.Size = new System.Drawing.Size(74, 17);
+            this.cb_giatNgam.TabIndex = 7;
+            this.cb_giatNgam.Text = "Giặt ngâm";
+            this.cb_giatNgam.UseVisualStyleBackColor = true;
+            this.cb_giatNgam.CheckedChanged += new System.EventHandler(this.cb_giatNgam_CheckedChanged);
             // 
             // WashingMachine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 421);
+            this.ClientSize = new System.Drawing.Size(669, 449);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.menuStrip1);
             this.Name = "WashingMachine";
@@ -310,6 +317,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_doban;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.CheckBox cb_giatNgam;
     }
 }
 
