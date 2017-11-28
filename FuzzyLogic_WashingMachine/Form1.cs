@@ -36,8 +36,6 @@ namespace FuzzyLogic_WashingMachine
         {
 
         }
-        
-
         private void UpdateChart()
         {
             label_doban.Text = "Độ bẩn : " + trackBar_doban.Value.ToString();
@@ -49,7 +47,6 @@ namespace FuzzyLogic_WashingMachine
             isGiatNgam();
             this.Invalidate();
         }
-
         private void WashingMachine_Paint(object sender, PaintEventArgs e)
         {
             DrawChartCloudiness(e.Graphics, cloudiness);
@@ -58,7 +55,6 @@ namespace FuzzyLogic_WashingMachine
             DrawChartWeight(e.Graphics, weightClothes);
 
         }
-
         private void trackBar_doban_Scroll(object sender, EventArgs e)
         {
             UpdateChart();
@@ -127,10 +123,10 @@ namespace FuzzyLogic_WashingMachine
         private void UpdateWeight()
         {
             //trọng lượng tối đa là 10kg
-            label_trongluong.Text = "Trọng lượng : " + ((float)trackBar_kg.Value/10).ToString()+" kg";
+            label_trongluong.Text = "Trọng lượng : " + ((float)trackBar_kg.Value / 10).ToString() + " kg";
             weightClothes = new Weight(trackBar_kg.Value);
             //washing = new Washing();
-            label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4 ).ToString()+" lít";
+            label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4).ToString() + " lít";
 
             this.Invalidate();
         }

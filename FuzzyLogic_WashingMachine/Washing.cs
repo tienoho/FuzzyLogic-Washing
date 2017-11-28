@@ -35,12 +35,8 @@ namespace FuzzyLogic_WashingMachine
         {
             _VeryShort = Math.Min(cloudiness.small, kindOfDirt.notGreasy);
             _Short = Math.Min(cloudiness.medium, kindOfDirt.notGreasy);
-            _Medium = Math.Min(cloudiness.large, kindOfDirt.notGreasy)
-                + Math.Min(cloudiness.small, kindOfDirt.Medium)
-                + Math.Min(cloudiness.medium, kindOfDirt.Medium);
-            _Long = Math.Min(cloudiness.large, kindOfDirt.Medium)
-                + Math.Min(cloudiness.small, kindOfDirt.Greasy)
-                + Math.Min(cloudiness.medium, kindOfDirt.Greasy);
+            _Medium = Math.Min(cloudiness.large, kindOfDirt.notGreasy) + Math.Min(cloudiness.small, kindOfDirt.Medium) + Math.Min(cloudiness.medium, kindOfDirt.Medium);
+            _Long = Math.Min(cloudiness.large, kindOfDirt.Medium) + Math.Min(cloudiness.small, kindOfDirt.Greasy) + Math.Min(cloudiness.medium, kindOfDirt.Greasy);
             _VeryLong = Math.Min(cloudiness.large, kindOfDirt.Greasy);
 
             BuildChart();
