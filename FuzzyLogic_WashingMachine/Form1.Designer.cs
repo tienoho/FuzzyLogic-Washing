@@ -47,14 +47,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_doban = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_sumTime = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.trackBar_kg = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label_luongnuoc = new System.Windows.Forms.Label();
             this.pB_Water = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -105,7 +103,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // aboutToolStripMenuItem
@@ -117,7 +115,6 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Location = new System.Drawing.Point(9, 36);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -272,16 +269,6 @@
             this.label_doban.TabIndex = 5;
             this.label_doban.Text = "Độ bẩn : ";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(644, 375);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "3D";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -336,7 +323,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Controls.Add(this.label_luongnuoc);
             this.groupBox4.Controls.Add(this.pB_Water);
             this.groupBox4.Location = new System.Drawing.Point(193, 8);
@@ -345,17 +331,6 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lượng nước";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(129, 188);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(38, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "Fill";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label_luongnuoc
             // 
@@ -482,7 +457,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_doban;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.CheckBox cb_giatNgam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_sumTime;
@@ -490,7 +464,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TrackBar trackBar_kg;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label_luongnuoc;
         private System.Windows.Forms.PictureBox pB_Water;
         private System.Windows.Forms.GroupBox groupBox6;

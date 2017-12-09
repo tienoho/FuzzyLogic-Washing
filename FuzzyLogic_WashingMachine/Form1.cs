@@ -17,6 +17,7 @@ namespace FuzzyLogic_WashingMachine
         KindOfDirt kindOfDir;
         Washing washing;
         Weight weightClothes;
+        WaterL waterr;
         public WashingMachine()
         {
             InitializeComponent();
@@ -105,14 +106,10 @@ namespace FuzzyLogic_WashingMachine
         }
         private void isGiatNgam()
         {
-            if (cb_giatNgam.Checked == true)
-            {
+            if (cb_giatNgam.Checked == true)            
                 lb_sumTime.Text = (washing.ComputeTime(cloudiness, kindOfDir) + 60).ToString();
-            }
-            else
-            {
-                lb_sumTime.Text = washing.ComputeTime(cloudiness, kindOfDir).ToString();
-            }
+            else            
+                lb_sumTime.Text = washing.ComputeTime(cloudiness, kindOfDir).ToString();            
         }
 
         private void cb_giatNgam_CheckedChanged_1(object sender, EventArgs e)
@@ -126,7 +123,10 @@ namespace FuzzyLogic_WashingMachine
             label_trongluong.Text = "Trọng lượng : " + ((float)trackBar_kg.Value / 10).ToString() + " kg";
             weightClothes = new Weight(trackBar_kg.Value);
             //washing = new Washing();
-            label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4).ToString() + " lít";
+            //lượng nước tối đa là 140 lít
+            //label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4).ToString() + " lít";
+            waterr = new WaterL();
+            label_luongnuoc.Text = "Lượng nước : " +waterr.ComputeTime4(weightClothes).ToString()+ " lít";
 
             this.Invalidate();
         }
