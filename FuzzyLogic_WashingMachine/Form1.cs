@@ -54,6 +54,7 @@ namespace FuzzyLogic_WashingMachine
             DrawChartKindOfDirt(e.Graphics, kindOfDir);
             DrawChart3(e.Graphics);
             DrawChartWeight(e.Graphics, weightClothes);
+           // DrawChartWater(e.Graphics);
 
         }
         private void trackBar_doban_Scroll(object sender, EventArgs e)
@@ -104,6 +105,22 @@ namespace FuzzyLogic_WashingMachine
             //vẽ hình kết quả
             new WashingOutput(g, pen, img, pictureBox3, washing, checkBox_Fill);
         }
+        //private void DrawChartWater(Graphics graphics)
+        //{
+        //    Pen pen = new Pen(Brushes.Green);
+        //    Bitmap img = new Bitmap(pB_Water.Width, pB_Water.Height, graphics);
+        //    Graphics g = Graphics.FromImage(img);
+        //    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+        //    //gạch dọc
+        //    for (int i = 0; i <= 10; i++)
+        //    {
+        //        int iPoint = i * 15;
+        //        g.DrawLine(pen, new Point(iPoint, 0), new Point(iPoint, img.Height));
+        //        g.DrawLine(pen, new Point(0, iPoint), new Point(img.Width, iPoint));
+        //    }
+        //    //vẽ hình kết quả
+        //    new WaterLOut(g, pen, img, pB_Water, waterr,trackBar_kg.Value);
+        //}
         private void isGiatNgam()
         {
             if (cb_giatNgam.Checked == true)            
@@ -124,9 +141,9 @@ namespace FuzzyLogic_WashingMachine
             weightClothes = new Weight(trackBar_kg.Value);
             //washing = new Washing();
             //lượng nước tối đa là 140 lít
-            //label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4).ToString() + " lít";
+            label_luongnuoc.Text = "Lượng nước : " + ((float)trackBar_kg.Value * 1.4).ToString() + " lít";
             waterr = new WaterL();
-            label_luongnuoc.Text = "Lượng nước : " +waterr.ComputeTime4(weightClothes).ToString()+ " lít";
+            //label_luongnuoc.Text = "Lượng nước : " +waterr.ComputeTime4(weightClothes).ToString()+ " lít";
 
             this.Invalidate();
         }
@@ -146,8 +163,19 @@ namespace FuzzyLogic_WashingMachine
             item.pen = new Pen(Brushes.Green);
             new WashingInput(item, graphics, item.pen, pB_Water, trackBar_kg.Value);
         }
+       
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
+
+        private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Phần mềm Fuzzy Washing\nCreater by Nhom 2 \n ");
+        }
+
+        private void cb_water_CheckedChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }

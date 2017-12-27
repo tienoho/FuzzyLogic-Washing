@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.trackBar_kg = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cb_water = new System.Windows.Forms.CheckBox();
             this.label_luongnuoc = new System.Windows.Forms.Label();
             this.pB_Water = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -103,7 +104,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // aboutToolStripMenuItem
@@ -111,6 +112,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click_1);
             // 
             // tabControl2
             // 
@@ -323,6 +325,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.cb_water);
             this.groupBox4.Controls.Add(this.label_luongnuoc);
             this.groupBox4.Controls.Add(this.pB_Water);
             this.groupBox4.Location = new System.Drawing.Point(193, 8);
@@ -331,6 +334,17 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Lượng nước";
+            // 
+            // cb_water
+            // 
+            this.cb_water.AutoSize = true;
+            this.cb_water.Location = new System.Drawing.Point(129, 191);
+            this.cb_water.Name = "cb_water";
+            this.cb_water.Size = new System.Drawing.Size(38, 17);
+            this.cb_water.TabIndex = 7;
+            this.cb_water.Text = "Fill";
+            this.cb_water.UseVisualStyleBackColor = true;
+            this.cb_water.CheckedChanged += new System.EventHandler(this.cb_water_CheckedChanged);
             // 
             // label_luongnuoc
             // 
@@ -347,7 +361,7 @@
             this.pB_Water.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pB_Water.Location = new System.Drawing.Point(15, 21);
             this.pB_Water.Name = "pB_Water";
-            this.pB_Water.Size = new System.Drawing.Size(152, 156);
+            this.pB_Water.Size = new System.Drawing.Size(157, 156);
             this.pB_Water.TabIndex = 1;
             this.pB_Water.TabStop = false;
             // 
@@ -470,6 +484,7 @@
         private System.Windows.Forms.PictureBox pB_kgQuanAo;
         private System.Windows.Forms.Label label_trongluong;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.CheckBox cb_water;
     }
 }
 
